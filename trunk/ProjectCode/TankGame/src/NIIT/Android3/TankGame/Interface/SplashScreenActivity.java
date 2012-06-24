@@ -1,5 +1,10 @@
-package NIIT.Android3.TankGame;
+package NIIT.Android3.TankGame.Interface;
 
+import NIIT.Android3.TankGame.R;
+import NIIT.Android3.TankGame.R.drawable;
+import NIIT.Android3.TankGame.R.id;
+import NIIT.Android3.TankGame.R.layout;
+import NIIT.Android3.TankGame.R.raw;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.AudioManager;

@@ -1,5 +1,8 @@
-package NIIT.Android3.TankGame;
+package NIIT.Android3.TankGame.Interface;
 
+import NIIT.Android3.TankGame.R;
+import NIIT.Android3.TankGame.R.id;
+import NIIT.Android3.TankGame.R.layout;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
