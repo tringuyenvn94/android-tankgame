@@ -10,8 +10,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -40,15 +42,14 @@ public class MenuActivity extends Activity {
 
 		imageMenuNewGame = (ImageView) findViewById(R.id.menu_newgame);
 		imageMenuHighScore = (ImageView) findViewById(R.id.menu_highscore);
-//		Button imageMenuHighScore = (Button) findViewById(R.id.menu_highscore);
-//		imageMenuHighScore.setOnClickListener(new OnClickListener() {
-//
-//			public void onClick(View v) {
-//				// TODO Auto-generated method stub
-//				View view = (View) findViewById(R.layout.highscore);
-//
-//			}
-//		});
+		imageMenuHighScore.setOnTouchListener(new OnTouchListener() {
+
+			public boolean onTouch(View v, MotionEvent event) {
+
+				setContentView(R.layout.highscore);
+				return false;
+			}
+		});
 
 		imageMenuOptions = (ImageView) findViewById(R.id.menu_options);
 		imageMenuAboutUs = (ImageView) findViewById(R.id.menu_aboutus);
