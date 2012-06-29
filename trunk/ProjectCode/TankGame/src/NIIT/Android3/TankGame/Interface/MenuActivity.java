@@ -55,6 +55,14 @@ public class MenuActivity extends Activity {
 		imageMenuAboutUs = (ImageView) findViewById(R.id.menu_aboutus);
 		imageMenuHelp = (ImageView) findViewById(R.id.menu_help);
 		imageMenuExit = (ImageView) findViewById(R.id.menu_exit);
+		imageMenuExit.setOnTouchListener(new OnTouchListener() {
+
+			public boolean onTouch(View v, MotionEvent event) {
+				// TODO Auto-generated method stub
+				finish();
+				return false;
+			}
+		});
 
 	}
 }
