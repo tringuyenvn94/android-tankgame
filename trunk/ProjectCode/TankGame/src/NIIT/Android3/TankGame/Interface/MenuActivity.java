@@ -40,15 +40,15 @@ public class MenuActivity extends Activity {
 
 		imageMenuNewGame = (ImageView) findViewById(R.id.menu_newgame);
 		imageMenuHighScore = (ImageView) findViewById(R.id.menu_highscore);
-		Button highButton = (Button) findViewById(R.id.menu_highscore);
-		highButton.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				View view = (View) findViewById(R.layout.highscore);
-
-			}
-		});
+//		Button imageMenuHighScore = (Button) findViewById(R.id.menu_highscore);
+//		imageMenuHighScore.setOnClickListener(new OnClickListener() {
+//
+//			public void onClick(View v) {
+//				// TODO Auto-generated method stub
+//				View view = (View) findViewById(R.layout.highscore);
+//
+//			}
+//		});
 
 		imageMenuOptions = (ImageView) findViewById(R.id.menu_options);
 		imageMenuAboutUs = (ImageView) findViewById(R.id.menu_aboutus);
