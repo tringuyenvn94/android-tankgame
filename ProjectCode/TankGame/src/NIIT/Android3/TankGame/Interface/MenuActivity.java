@@ -45,7 +45,7 @@ public class MenuActivity extends Activity {
 
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				setContentView(R.layout.highscore);
+				View view = (View) findViewById(R.layout.highscore);
 
 			}
 		});
