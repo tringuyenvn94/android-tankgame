@@ -29,7 +29,6 @@ public class MenuActivity extends Activity {
 	private ImageView imageMenuHelp;
 	private ImageView imageMenuExit;
 
-	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -53,6 +52,13 @@ public class MenuActivity extends Activity {
 
 		imageMenuOptions = (ImageView) findViewById(R.id.menu_options);
 		imageMenuAboutUs = (ImageView) findViewById(R.id.menu_aboutus);
+		imageMenuAboutUs.setOnTouchListener(new OnTouchListener() {
+			
+			public boolean onTouch(View v, MotionEvent event) {
+				setContentView(R.layout.about);
+				return false;
+			}
+		});
 		imageMenuHelp = (ImageView) findViewById(R.id.menu_help);
 		imageMenuExit = (ImageView) findViewById(R.id.menu_exit);
 		imageMenuExit.setOnTouchListener(new OnTouchListener() {
@@ -61,6 +67,15 @@ public class MenuActivity extends Activity {
 				// TODO Auto-generated method stub
 				finish();
 				return false;
+			}
+		});
+		setContentView(R.layout.menu);
+		Button bt = (Button)findViewById(R.id.back);
+		bt.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
 			}
 		});
 
