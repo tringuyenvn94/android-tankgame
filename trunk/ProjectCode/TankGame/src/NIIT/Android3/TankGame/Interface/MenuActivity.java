@@ -69,15 +69,7 @@ public class MenuActivity extends Activity {
 				return false;
 			}
 		});
-		setContentView(R.layout.menu);
-		Button bt = (Button)findViewById(R.id.back);
-		bt.setOnClickListener(new View.OnClickListener() {
-			
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
+		
 
 	}
 }
