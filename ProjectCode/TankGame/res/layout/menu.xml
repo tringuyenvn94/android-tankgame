@@ -2,42 +2,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" 
-    android:background="@drawable/menu_background">
+    android:background="@drawable/menu_background"
+    android:orientation="vertical" >
 
     <ImageView
-        android:id="@+id/menu_newgame"
+        android:id="@+id/menu_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/menu_newgame" />
+        android:layout_marginBottom="34dp"
+        android:src="@drawable/menu_exit" />
 
     <ImageView
         android:id="@+id/menu_highscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/menu_newgame"
-        android:layout_below="@+id/menu_newgame"
-        android:layout_marginTop="15dp"
+        android:layout_above="@+id/menu_exit"
+        android:layout_alignLeft="@+id/menu_exit"
+        android:layout_marginBottom="20dp"
         android:src="@drawable/menu_highscore" />
 
     <ImageView
         android:id="@+id/menu_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/menu_highscore"
         android:layout_alignLeft="@+id/menu_highscore"
-        android:layout_below="@+id/menu_highscore"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
         android:src="@drawable/menu_options" />
 
     <ImageView
         android:id="@+id/menu_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/menu_options"
         android:layout_alignLeft="@+id/menu_options"
-        android:layout_below="@+id/menu_options"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="23dp"
         android:src="@drawable/menu_help" />
 
     <ImageView
@@ -45,17 +46,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/menu_help"
-        android:layout_below="@+id/menu_help"
-        android:layout_marginTop="15dp"
+        android:layout_centerVertical="true"
         android:src="@drawable/menu_aboutus" />
 
     <ImageView
-        android:id="@+id/menu_exit"
+        android:id="@+id/menu_newgame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/menu_aboutus"
         android:layout_alignLeft="@+id/menu_aboutus"
-        android:layout_below="@+id/menu_aboutus"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/menu_exit" />
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/menu_newgame" />
 
 </RelativeLayout>
