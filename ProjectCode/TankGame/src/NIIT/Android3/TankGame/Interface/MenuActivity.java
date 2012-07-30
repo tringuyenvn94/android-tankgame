@@ -1,11 +1,16 @@
 package NIIT.Android3.TankGame.Interface;
 
+import java.util.Set;
+
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 
 import NIIT.Android3.TankGame.R;
 import NIIT.Android3.TankGame.R.id;
 import NIIT.Android3.TankGame.R.layout;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -53,23 +58,64 @@ public class MenuActivity extends Activity {
 		imageMenuOptions = (ImageView) findViewById(R.id.menu_options);
 		imageMenuAboutUs = (ImageView) findViewById(R.id.menu_aboutus);
 		imageMenuAboutUs.setOnTouchListener(new OnTouchListener() {
-			
+
 			public boolean onTouch(View v, MotionEvent event) {
 				setContentView(R.layout.about);
 				return false;
 			}
 		});
 		imageMenuHelp = (ImageView) findViewById(R.id.menu_help);
+		imageMenuHelp.setOnTouchListener(new OnTouchListener() {
+
+			public boolean onTouch(View v, MotionEvent event) {
+				setContentView(R.layout.help);
+				return false;
+			}
+		});
 		imageMenuExit = (ImageView) findViewById(R.id.menu_exit);
 		imageMenuExit.setOnTouchListener(new OnTouchListener() {
 
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
-				finish();
+				switch (v.getId()) {
+				case R.id.menu_exit:
+					menu_exit();
+
+					break;
+
+				default:
+					break;
+				}
 				return false;
 			}
+
+			private void menu_exit() {
+				AlertDialog.Builder alertDialog = new AlertDialog.Builder(
+						(MenuActivity.this));
+
+				alertDialog.setMessage("Are you sure you want to exit?");
+
+				alertDialog.setPositiveButton("OK",
+						new DialogInterface.OnClickListener() {
+
+							public void onClick(DialogInterface arg0, int arg1) {
+								MenuActivity.this.finish();
+
+							}
+						});
+				alertDialog.setNegativeButton("No",
+						new DialogInterface.OnClickListener() {
+
+							public void onClick(DialogInterface dialog,
+									int which) {
+								dialog.cancel();
+
+							}
+						});
+
+				alertDialog.show();
+
+			}
 		});
-		
 
 	}
 }
